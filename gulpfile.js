@@ -169,22 +169,22 @@ gulp.task('build', ['clean', 'img', 'sass', 'common-scripts', 'scripts'], functi
 		'dev/css/main.min.css',
 		'dev/css/main.css'
 		])
-	.pipe(gulp.dest('build/css'))
+	.pipe(gulp.dest('build/css'));
 
 	var buildFonts = gulp.src('dev/fonts/**/*')
-	.pipe(gulp.dest('build/fonts'))
+	.pipe(gulp.dest('build/fonts'));
 
 	var buildSvg = gulp.src('dev/img/svgSprite/symbol/sprite.svg')
-	.pipe(gulp.dest('build/img/svgSprite/symbol'))
+	.pipe(gulp.dest('build/img/svgSprite/symbol'));
 
 	var buildJs = gulp.src('dev/js/**/*')
-	.pipe(gulp.dest('build/js'))
+	.pipe(gulp.dest('build/js'));
 
 	var buildHtml = gulp.src('dev/*.html')
 	.pipe(gulp.dest('build'));
 
-	var buildImg = gulp.src('dev/img/sprite/sprite.png')
-	.pipe(gulp.dest('build/img/sprite/'));
+	var buildImg = gulp.src('dev/img/pngSprite/sprite.png')
+	.pipe(gulp.dest('build/img/pngSprite/'));
 });
 
 gulp.task('default', ['watch']);

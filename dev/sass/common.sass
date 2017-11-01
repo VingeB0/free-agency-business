@@ -1,5 +1,24 @@
-.logo
+@import 'vars.sass'
+
 .g-btn
+	display: inline-block
+	font: 15px/15px $NeueBold, $familyFont
+	color: #fff
+	border-radius: 5px
+	padding: 9px 20px
+	border: 1px solid transparent
 .section-title
-.section-text__big
-.section-text__small
+	color: $textColor
+	font: 36px/36px $NeueBold, $familyFont
+.section-text
+	position: relative
+	color: $textColor
+	font: 20px/26px $NeueLight, $familyFont
+	&:after
+		content: ''
+		position: absolute
+		bottom: -17px
+		left: calc(50% - 24px)
+		width: 48px
+		height: 5px
+		background-color: $textColor

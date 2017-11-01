@@ -1,0 +1,24 @@
+@import '../vars.sass'
+
+.top-banner
+	padding-top: 170px
+	min-height: 590px
+	background: $blueColor url("../img/content/bg_top-banner.jpg") center center no-repeat
+	background-size: cover
+	color: #fff
+	text-align: center
+	&__title
+		font: 48px/48px $NeueBold, $familyFont
+	&__text
+		font: 30px/30px $NeueLight, $familyFont
+	&__btn
+		padding: 21px 44px
+		margin-top: 35px
+		text-transform: uppercase
+		background-color: $yellowColor
+		font: 23px/23px $NeueBold, $familyFont
+		transition: 0.3s linear
+		&:hover
+			color: $yellowColor
+			background-color: transparent
+			border: 1px solid $yellowColor

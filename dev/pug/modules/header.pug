@@ -1,21 +1,23 @@
 header.header
-	.container
-		.header__top
-			a(href="tel:+63393128") +63393128
-			a(href="mailto:info@business.co") info@business.co
-			a.icon.icon-fb
-		.header__bottom
+	.header__top
+		.container
+			.contacts
+				a(href="tel:63393128").contacts__icon.contacts__icon-phone 6337 3128
+				a(href="mailto:info@business.co").contacts__icon.contacts__icon-mail info@business.co
+				a(href="javascript:void(0);").contacts__icon-fb
+	.header__bottom
+		.container
 			.logo
 				a(href="/")
 					img(src="img/general/logo.png" title="Логотип Business Tagline goes here")
-			nav
+			nav.nav
 				ul.nav__list
 					li
-						a(href="javascript:void(0);") Home
+						a(href="javascript:void(0);").nav__item-active Home
 					li
-						a(href="javascript:void(0);") About us
+						a(href="javascript:void(0);") About Us
 					li
 						a(href="javascript:void(0);") Our Approch
 					li
 						a(href="javascript:void(0);") Our Work
-			a(src="javascript:void(0);") Free Consultation
+			a(href="javascript:void(0);").g-btn.header__bottom-btn Free Consultation

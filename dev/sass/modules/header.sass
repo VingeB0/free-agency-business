@@ -1,0 +1,118 @@
+@import '../vars.sass'
+@import '../mixins.sass'
+
+.header
+	&__top
+		padding: 8px 0
+		background-color: $greyColor
+		border-bottom: 1px solid $borderGreyColor
+	&__bottom
+		padding: 30px 0
+		&-btn
+			margin-right: 2px
+			background-color: $redColor
+			transition: 0.3s linear
+			&:hover
+				color: $redColor
+				border: 1px solid $redColor
+				background-color: #fff
+		.container
+			padding: 11px 0
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			align-items: center
+
+.contacts
+	font: 15px/15px $NeueRegular, $familyFont
+	text-align: right
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		margin-right: 14px
+		&:first-child
+			margin-right: 70px
+		&-phone
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				left: -20px
+				top: -2px
+				display: inline-block
+				vertical-align: middle
+				background-repeat: no-repeat
+				@include sprite($s-header_phone)
+				transition: 0.2s linear
+			&:before
+				content: ''
+				position: absolute
+				top: -14px
+				right: -22px
+				height: 47px
+				width: 1px
+				background-color: $borderGreyColor
+			&:hover
+				text-decoration: underline
+				&:after
+					transform: rotate(20deg)
+		&-mail
+			position: relative
+			margin-top: 2px
+			&:after
+				content: ''
+				position: absolute
+				left: -30px
+				top: -1px
+				display: inline-block
+				vertical-align: middle
+				background-repeat: no-repeat
+				@include sprite($s-header_mail)
+				transition: 0.2s linear
+			&:hover
+				text-decoration: underline
+				&:after
+					transform: rotate(20deg)
+		&-fb
+			display: inline-block
+			vertical-align: middle
+			padding: 13px 13px 13px 13px
+			border-radius: 4px
+			background: #1287bf url(../img/pngSprite/sprite.png) -44px -81px no-repeat
+			width: 8px
+			height: 16px
+			transition: 0.3s linear
+			&:hover
+				background-color: #000
+
+.logo
+	a
+		display: block
+		img
+			display: block
+
+.nav
+	margin-left: 16%
+	&__item-active
+		color: $redColor
+	&__list
+		li
+			display: inline-block
+			vertical-align: top
+			&:after
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				margin: 0 15px
+				background-color: #000
+				width: 5px
+				height: 5px
+				border-radius: 50%
+			&:last-child
+				&:after
+					content: none
+		a
+			font: 15px/15px $NeueBold, $familyFont
+			transition: 0.2s linear
+			&:hover
+				color: $redColor

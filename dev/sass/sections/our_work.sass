@@ -1,0 +1,71 @@
+@import '../vars.sass'
+@import '../mixins.sass'
+@import '../animation.sass'
+
+.our-work
+	padding: 106px 0 126px
+	text-align: center
+	background-color: $redColor
+	.container
+		.section
+			&-title,
+			&-text
+				color: #fff
+			&-text
+				margin-bottom: 62px
+				&:after
+					background-color: #fff
+	&__wrap
+		display: flex
+		flex-flow: wrap row
+		justify-content: center
+	&__item
+		max-width: 255px
+		width: 100%
+		min-height: 255px
+		overflow: hidden
+		a
+			display: block
+		&--text
+			position: relative
+			padding: 138px 20px 14px
+			color: #fff
+			background-color: $redLightColor
+			&:before
+				content: ''
+				position: absolute
+				left: calc( 50% - 18px )
+				top: calc( 38% - 18px )
+				display: block
+				@include sprite($s-icon-plane)
+				background-repeat: no-repeat
+			&:hover
+				&:before
+					animation: plane 2s linear forwards
+		&--img
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				background-color: rgba(255, 255, 255, 0.2)
+				width: 360px
+				height: 100px
+				bottom: -81px
+				left: -223px
+				z-index: 1
+				transform: rotate(45deg)
+			&:hover
+				&:before
+					transition: 0.1s
+					bottom: 246px
+					left: 109px
+	&__img
+		img
+			display: block
+			max-width: 255px
+			width: 100%
+			min-height: 255px
+	&__title
+		font: 26px/26px $NeueBold, $familyFont
+	&__text
+		font: 15px/15px $NeueBold, $familyFont

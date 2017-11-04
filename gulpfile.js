@@ -64,7 +64,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'dev/libs/svg4everybody/svg4everybody.min.js'
+		// 'dev/libs/svg4everybody/svg4everybody.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
@@ -84,7 +84,7 @@ gulp.task('pngSpriteBuild', function() {
 		.pipe(spritesmith({
 			imgName: 'sprite.png',
 			cssName: 'pngSprite.sass',
-			padding: 15,
+			padding: 40,
 			cssFormat: 'sass',
 			algorithm: 'binary-tree', 
 			cssTemplate: 'handlebarsInheritance.sass.handlebars',

@@ -1,5 +1,13 @@
 @import 'vars.sass'
 
+.text
+	&-left
+		text-align: left
+		padding: 0 54px 0 90px
+	&-right
+		text-align: right
+		padding: 0 90px 0 54px
+
 .g-btn
 	display: inline-block
 	font: 15px/15px $NeueBold, $familyFont
@@ -7,18 +15,20 @@
 	border-radius: 5px
 	padding: 9px 20px
 	border: 1px solid transparent
-.section-title
-	color: $textColor
-	font: 36px/36px $NeueBold, $familyFont
-.section-text
-	position: relative
-	color: $textColor
-	font: 20px/26px $NeueLight, $familyFont
-	&:after
-		content: ''
-		position: absolute
-		bottom: -17px
-		left: calc(50% - 24px)
-		width: 48px
-		height: 5px
-		background-color: $textColor
+
+.section
+	&-title
+		color: $textColor
+		font: 36px/36px $NeueBold, $familyFont
+	&-text
+		position: relative
+		color: $textColor
+		font: 20px/26px $NeueLight, $familyFont
+		&:after
+			content: ''
+			position: absolute
+			bottom: -17px
+			left: calc(50% - 24px)
+			width: 48px
+			height: 5px
+			background-color: $textColor

@@ -1,2 +1,20 @@
 footer.footer
-	.container footer
+	.container
+		.footer__top
+			h2.section-title Get in touch
+			.footer__social
+				ul.footer__social-list
+					li.footer__social-item
+						a(href="javascript:void(0);").footer__social-icon.footer__social--fb
+					li.footer__social-item
+						a(href="javascript:void(0);").footer__social-icon.footer__social--tw
+					li.footer__social-item
+						a(href="javascript:void(0);").footer__social-icon.footer__social--gpl
+					li.footer__social-item
+						a(href="javascript:void(0);").footer__social-icon.footer__social--in
+			p.section-text Subscribe to our newsletter to stay update with what is new
+			form(action="#" method="POST").footer__subscribe
+				input(type="email" name="email" placeholder="Email Address" required)
+				button(type="submit").g-btn Subscribe
+	.footer__bottom
+		p.section-text.footer__coppy Cssauthor.com © 2014 All Rights Reserved

@@ -2,6 +2,17 @@
 	.nav
 		margin-left: 0
 
+@media only screen and (max-width : 1057px)
+	.our-work
+		&__wrap
+			margin: 0 auto
+			max-width: 740px
+			width: 100%
+		&__item
+			margin-bottom: 1px
+			&:last-child
+				margin-bottom: 0
+
 @media only screen and (max-width : 992px)
 	.about-us
 		padding: 44px 0
@@ -15,6 +26,26 @@
 			width: 60%
 			&:last-child
 				margin-bottom: 0
+
+@media only screen and (max-width : 850px)
+	.our-approch
+		&__left
+			width: 100%
+			order: 1
+			padding: 40px 0 20px
+			&:nth-child(even),
+			&:nth-child(odd)
+				.our-approch__step
+					left: auto
+					right: auto
+					top: calc(20% - 58px)
+	.our-approch
+		&__right
+			max-width: 100%
+			text-align: center
+	.text-right,
+	.text-left
+		padding: 30px 20px
 
 @media only screen and (max-width : 814px)
 	.header
@@ -37,9 +68,19 @@
 			font: 20px/20px $NeueLight, $familyFont
 		&__btn
 			padding: 18px 24px
+	.subscribe
+		padding: 96px 20px 110px
+		&__form
+			padding: 30px 10px
+	.footer__top
+		padding: 40px 10px 86px
 
-@media only screen and (max-width : 480px)
-    /**/
+@media only screen and (max-width : 538px)
+	.our-work
+		&__item
+			margin-bottom: 0
+			&:nth-child(2n)
+				margin-bottom: 30px
 
 @media only screen and (max-width : 425px)
 	.header

@@ -1,6 +1,72 @@
 @import '../vars.sass'
 
 .our-approch
-	padding: 86px 0
+	counter-reset: counter-approch
+	padding: 86px 0 130px
 	background-color: $lightColor
 	text-align: center
+	.container
+		.section-text
+			margin-bottom: 62px
+	&__item
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+		margin-bottom: 33px
+		min-height: 240px
+		background-color: #fff
+		border: 1px solid $borderGreyColor
+		&:hover
+			.our-approch__step
+				transform: rotateY(360deg)
+		&:last-child
+			margin-bottom: 0
+	&__left
+		display: flex
+		flex-flow: row wrap
+		align-items: center
+		justify-content: center
+		align-content: center
+		position: relative
+		&:nth-child(even)
+			.our-approch__step
+				right: calc(100% - 51px)
+		&:nth-child(odd)
+			.our-approch__step
+				left: calc(100% - 51px)
+	&__step
+		position: absolute
+		top: calc(50% - 58px)
+		padding: 8px 30px 22px
+		border-radius: 5px
+		color: #fff
+		border: 2px solid #fff
+		font: 20px/20px $NeueRegular, $familyFont
+		background-color: $redColor
+		z-index: 1
+		transition: 1s ease
+		&:before
+			display: block
+			margin-bottom: -3px
+			font: 53px/53px $boldFont, $familyFont
+			counter-increment: counter-approch
+			content: counter(counter-approch)
+	&__img
+		img
+			display: block
+			max-width: 340px
+			width: 100%
+			min-height: 240px
+	&__right
+		display: flex
+		flex-flow: column wrap
+		justify-content: center
+		max-width: calc(100% - 340px)
+		width: 100%
+		padding-top: 20px
+		padding-bottom: 20px
+	&__title
+		font: 18px/18px $NeueBold, $familyFont
+		margin-bottom: 10px
+	&__text
+		font: 14px/22px $mainFont, $familyFont
